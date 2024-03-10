@@ -1,15 +1,25 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { Image, StyleSheet, Text, View } from 'react-native';
-import logoEmpire from '../../../assets/LogoEmpire.png';
+import { StyleSheet, View } from 'react-native';
+
+// Components
+import { CustomText } from '../../components';
+import { Logo } from '../../components';
+import { ThemeProvider } from 'styled-components/native';
+
+const theme = {
+  bg: '#fff'
+}
 
 export const SplashScreen = () => {
   return (
+    <ThemeProvider theme={theme}>
     <View style={styles.container}>
-      <Image source={logoEmpire} style={styles.logo}/>
-      <Text style={styles.titleText}>StarWars - Wiki</Text>
+      <Logo />
+      <CustomText>Star Wars - Wiki</CustomText>
       <StatusBar style="auto" />
     </View>
+    </ThemeProvider>
   );
 }
 
@@ -20,14 +30,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  logo:{
-    width: 64,
-    height: 64
-  },
-  titleText: {
-    fontWeight: 'bold',
-    color: '#fff',
-    fontSize: 24,
-    marginTop: 12,
-  }
 });
