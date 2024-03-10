@@ -1,8 +1,9 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Image, StyleSheet, Text, View } from 'react-native';
-import logoEmpire from './assets/LogoEmpire.png';
+import logoEmpire from '../../../assets/LogoEmpire.png';
 
-export default function App() {
+export const SplashScreen = () => {
   return (
     <View style={styles.container}>
       <Image source={logoEmpire} style={styles.logo}/>
