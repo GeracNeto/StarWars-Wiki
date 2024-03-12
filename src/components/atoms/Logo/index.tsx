@@ -1,8 +1,6 @@
-import logoEmpire from '../../../../assets/LogoEmpire.png';
-import { LogoImage } from './styles';
+import logoEmpire from "../../../../assets/LogoEmpire.png";
+import { LogoImage } from "./styles";
 
 export const Logo = () => {
-    return(
-        <LogoImage source={logoEmpire} />
-    )
-}
+  return <LogoImage source={logoEmpire} />;
+};
