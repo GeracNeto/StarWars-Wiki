@@ -7,8 +7,8 @@ interface StyledTextProps extends TextProps {
 }
 
 export const StyledText = styled.Text<StyledTextProps>`
-  color: ${(props) => props.customColor || "#fff"};
-  font-size: 24px;
-  margin-top: 12px;
-  font-family: "SourceSansPro_700Bold";
+  color: ${(props) => props.customColor || props.theme.colors.white};
+  font-size: ${(props) => props.theme.metrics.px(24)}px;
+  margin-top: ${(props) => props.theme.metrics.px(12)}px;
+  font-family: ${(props) => props.theme.fonts.bold};
 `;

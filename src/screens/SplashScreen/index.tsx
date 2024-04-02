@@ -5,21 +5,14 @@ import { StyleSheet, View } from "react-native";
 // Components
 import { CustomText } from "../../components";
 import { Logo } from "../../components";
-import { ThemeProvider } from "styled-components/native";
-
-const theme = {
-  bg: "#fff",
-};
 
 export const SplashScreen = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <View style={styles.container}>
-        <Logo />
-        <CustomText>StarWars - Wiki</CustomText>
-        <StatusBar style="auto" />
-      </View>
-    </ThemeProvider>
+    <View style={styles.container}>
+      <Logo />
+      <CustomText>StarWars - Wiki</CustomText>
+      <StatusBar style="auto" />
+    </View>
   );
 };
 

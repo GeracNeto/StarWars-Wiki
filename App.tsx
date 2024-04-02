@@ -7,6 +7,8 @@ import {
   SourceSansPro_900Black,
 } from "@expo-google-fonts/source-sans-pro";
 import { View, Text, ActivityIndicator } from "react-native";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./src/styles";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -32,5 +34,9 @@ export default function App() {
     );
   }
 
-  return <SplashScreen />;
+  return (
+    <ThemeProvider theme={theme}>
+      <SplashScreen />
+    </ThemeProvider>
+  );
 }
